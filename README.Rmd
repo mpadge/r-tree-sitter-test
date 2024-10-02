@@ -1,0 +1,37 @@
+---
+title: "r-tree-sitter test"
+output:
+  md_document:
+    variant: gfm
+
+  rmarkdown::html_vignette:
+    self_contained: no
+---
+
+This package is for testing an issue in [Davis Vaughan's `r-tree-sitter`
+package](https://github.com/DavisVaughan/r-tree-sitter). Run the following code
+after installing this package (called "test"):
+
+First, download a random tarball into `tempdir()`:
+
+```{r dl}
+path <- test::dl_tarball ("odbc_1.5.0.tar.gz")
+```
+
+Then run the following code to demonstrate the problem:
+
+```{r demo, error = TRUE}
+bodies <- test::get_captures (path)
+library (test)
+bodies <- test::get_captures (path)
+```
+
+Those both error, and yet work when the full namespace of this package is
+loaded:
+
+```{r}
+pkg_path <- "/<local>/<path>/<to>/r-tree-sitter-test/"
+devtools::load_all (pkg_path)
+bodies <- test::get_captures (path)
+length (bodies)
+```
