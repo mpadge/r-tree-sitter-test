@@ -1,3 +1,9 @@
+[![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+
+This package has been archived.
+
+---
+
 This package is for testing an issue in [Davis Vaughan’s `r-tree-sitter`
 package](https://github.com/DavisVaughan/r-tree-sitter). Run the
 following code after installing this package (called “test”):

@@ -8,6 +8,12 @@ output:
     self_contained: no
 ---
 
+[![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+
+This package has been archived.
+
+---
+
 This package is for testing an issue in [Davis Vaughan's `r-tree-sitter`
 package](https://github.com/DavisVaughan/r-tree-sitter). Run the following code
 after installing this package (called "test"):
@@ -30,7 +36,7 @@ Those both error, and yet work when the full namespace of this package is
 loaded:
 
 ```{r}
-pkg_path <- "/<local>/<path>/<to>/r-tree-sitter-test/"
+pkg_path <- "/home/smexus/Documents/r-tree-sitter-test/"
 devtools::load_all (pkg_path)
 bodies <- test::get_captures (path)
 length (bodies)
